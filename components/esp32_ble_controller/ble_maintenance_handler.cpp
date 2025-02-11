@@ -24,7 +24,8 @@ namespace esp32_ble_controller {
 static const char *TAG = "ble_maintenance_handler";
 
 BLEMaintenanceHandler::BLEMaintenanceHandler() : ble_command_characteristic(nullptr) {
-  commands.push_back(new BLECommandHelp());
+  // Commented out 'help' command to improve security by not exposing my custom commands. 
+  // commands.push_back(new BLECommandHelp());
   commands.push_back(new BLECommandSwitchMaintenanceOnOrOff());
   commands.push_back(new BLECommandSwitchComponentServicesOnOrOff());
 #ifdef USE_WIFI
