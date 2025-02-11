@@ -23,7 +23,7 @@ string BLECommand::get_command_specific_help() const {
 
 // help ///////////////////////////////////////////////////////////////////////////////////////////////
 
-BLECommandHelp::BLECommandHelp() : BLECommand("help", "shows help for commands.") {}
+/*BLECommandHelp::BLECommandHelp() : BLECommand("help", "shows help for commands.") {}
 
 void BLECommandHelp::execute(const vector<string>& arguments) const {
   if (arguments.empty()) {
@@ -45,7 +45,7 @@ void BLECommandHelp::execute(const vector<string>& arguments) const {
     }
   }
 }
-
+*/
 // ble-maintenance ///////////////////////////////////////////////////////////////////////////////////////////////
 
 BLECommandSwitchMaintenanceOnOrOff::BLECommandSwitchMaintenanceOnOrOff() : BLECommand("ble-maintenance", "'ble-maintenance off' disables the maintenance BLE service.") {}
