@@ -48,7 +48,7 @@ void BLEMaintenanceHandler::setup(BLEServer* ble_server) {
   BLEService* service = ble_server->createService(SERVICE_UUID);
 
   ble_command_characteristic = create_writeable_ble_characteristic(service, CHARACTERISTIC_UUID_CMD, this, "BLE Command Channel");
-  ble_command_characteristic->setValue("Send 'help' for help.");
+  //ble_command_characteristic->setValue("Send 'help' for help.");
  
 #ifdef USE_LOGGER
   logging_characteristic = create_read_only_ble_characteristic(service, CHARACTERISTIC_UUID_LOGGING, "Log messages");
@@ -93,7 +93,8 @@ void BLEMaintenanceHandler::on_command_written() {
         return;
       }
     }
-    send_command_result("Unkown command '" + command_name + "', try 'help'.");
+    //send_command_result("Unkown command '" + command_name + "', try 'help'.");
+    send_command_result("Unkown command '" + command_name + "'.");
   }
 }
 
