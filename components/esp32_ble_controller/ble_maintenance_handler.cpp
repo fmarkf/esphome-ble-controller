@@ -49,7 +49,6 @@ void BLEMaintenanceHandler::setup(BLEServer* ble_server) {
 
   ble_command_characteristic = create_writeable_ble_characteristic(service, CHARACTERISTIC_UUID_CMD, this, "BLE Command Channel");
   //ble_command_characteristic->setValue("Send 'help' for help.");
-  tttt
  
 #ifdef USE_LOGGER
   logging_characteristic = create_read_only_ble_characteristic(service, CHARACTERISTIC_UUID_LOGGING, "Log messages");
