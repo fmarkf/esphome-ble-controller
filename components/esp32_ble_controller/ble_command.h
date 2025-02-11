@@ -35,13 +35,13 @@ private:
 
 // help ///////////////////////////////////////////////////////////////////////////////////////////////
 
-class BLECommandHelp : public BLECommand {
+/*class BLECommandHelp : public BLECommand {
 public:
   BLECommandHelp();
   virtual ~BLECommandHelp() {}
 
   virtual void execute(const vector<string>& arguments) const override;
-};
+};*/
 
 // ble-maintenance ///////////////////////////////////////////////////////////////////////////////////////////////
 
